@@ -1,0 +1,95 @@
+{% extends 'core/base.html' %}
+
+{% load static %}
+
+{% block css %}
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.3.5/jquery.fancybox.min.css" />
+
+    {% block javascript %}
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.3.5/jquery.fancybox.min.js"></script>
+    {% endblock %}
+{% endblock %}
+
+{% block contenido %}
+
+<body>
+
+    <div id="contenido_postres">
+        <h2 class="titulo_contenedor_postres">POSTRES</h2>
+        <div id="contenedor_postre1">
+<!--   La etiqueta <a> sirve para redireccionar la imagen al url y, al hacer clic sobre ella, abrirla en tamaño original. -->
+            <img src="{% static 'core/img/DonHelajor.jpg' %}" alt="" class="estilo_imagen_postre1">
+            <H1 class="estilo_titulo_postre1"><strong>DON HELAJOR</strong></H1> <!-- La etiqueta <H1> representa
+                                                                                        una letra mayor y, a medida que el número que
+                                                                                        está junto a la etiqueta 'H' vaya aumentando (2, 3, 4, etc),
+                                                                                         la letra va a ser más chica. -->
+
+            <p class="estilo_descripcion_postre1"> <!-- El tamaño de la letra de la etiqueta <H3>
+                                                        es menor a la de la <H1>  -->
+                Capas de helado de dulce de leche,
+                relleno con abundante dulce de leche repostero y
+                con la cobertura de un exquisito chocolate.
+                Este postre es ideal para los meses de verano.
+                ¡Es muy popular en Latinoamérica!
+                (6 unidades)
+            </p>
+        </div>
+        <div id="contenedor_postre2">
+            <img src="{% static 'core/img/DonFantasia.jpg' %}" alt="" class="estilo_imagen_postre2">
+            <H1 class="estilo_titulo_postre2"><strong>DON FANTASÍA</strong></H1>
+
+            <p class="estilo_descripcion_postre2">
+                Barra rectangular de biscochuelo de vainilla,
+                relleno de panna a la cereza y frutilla,
+                decorada con chocolate blanco, chantilly y cerezas.
+                (8 porciones)
+            </p>
+        </div>
+        <div id="contenedor_postre3">
+            <img src="{% static 'core/img/DonAlmendrado.jpg' %}" alt="" class="estilo_imagen_postre3">
+            <H1 class="estilo_titulo_postre3"><strong>DON ALMENDRADO</strong></H1>
+
+            <p class="estilo_descripcion_postre3">
+                Porción individual hecha a base de helado de almendra,
+                recubierto de una abundante exquisita granola, y acompañado
+                de unas crocantes y ricas almendras.
+                (1 porción)
+            </p>
+        </div>
+        <div id="contenedor_postre4">
+            <img src="{% static 'core/img/DonBombon.jpg' %}" alt="" class="estilo_imagen_postre4">
+            <H1 class="estilo_titulo_postre4"><strong>DON BOMBÓN</strong></H1>
+
+            <p class="estilo_descripcion_postre4">
+                Exquisitos bombones de crema americana bañados con chocolate de primera calidad,
+                decorados con excelentes almendras trituradas.
+                (12 unidades)
+            </p>
+        </div>
+        <div id="contenedor_postre5">
+            <img src="{% static 'core/img/DonOreo.jpg' %}" alt="" class="estilo_imagen_postre5">
+            <H1 class="estilo_titulo_postre5"><strong>DON OREO</strong></H1>
+
+            <p class="estilo_descripcion_postre5">
+                Torta elaborada con una base de queso crema, helado de americana,
+                recubierta con chips de chocolate, crema chantillí en sus bordes,
+                y galletitas Oreo en sus esquinas.
+                (12 porciones)
+            </p>
+        </div>
+        <div id="contenedor_postre6">
+            <img src="{% static 'core/img/DonGelato.jpg' %}" alt="" class="estilo_imagen_postre6">
+            <H1 class="estilo_titulo_postre6"><strong>DON GELATO</strong></H1>
+
+            <p class="estilo_descripcion_postre6">
+                Barra rectangular de helado de chocolate,
+                rellena con crema americana, con un corazón de dulce leche repostero. Además, contiene otra capa
+                de helado de dulce de leche, recubierta con chocolate triturado y en rama.
+                ¡Es el auténtico postre de la casa!
+                (10 porciones)
+            </p>
+        </div>
+    </div>
+</body>
+{% endblock %}

@@ -1,0 +1,51 @@
+{% extends 'core/base.html' %}
+
+{% load static %}
+
+{% block contenido %}
+<body>
+    <head>
+        <link rel="stylesheet" href="{% static 'core/css/estilos.css' %}">
+    </head>
+
+    </div>  <!-- EL </div> HACE QUE LA IMAGEN COLOCADA QUEDE AJUSTADA AUTOMATICAMENTE A
+                LA PANTALLA SIN IMPORTAR SI ALEJAMOS O ACERCAMOS CON EL ZOOM. -->
+
+    <div id="contenedor_logo">
+        <img src="{% static 'core/img/logo_Don_Gelato.png' %}" alt="" class="estilo_logo_DonGelato">
+
+        <p class="titulo_textoDeslizable">¡DEJATE TENTAR!</p>
+
+        <div class="contenedor_texto_deslizable">
+            <p class="estilo_ENCONTRA">ENCONTRÁ</p>
+            <ul class="estilo_ul_li_deslizable"> <!-- Esta etiqueta crea una lista NO ordenada. -->
+                <li>CREMAS</li> <!-- Cada elemento (item) de la lista. -->
+                <li>POSTRES</li>
+                <li>TORTAS</li>
+            </ul>
+        </div>
+    </div>
+
+    <p class="estilo_horario1">
+        Domingos a Jueves de 12:30 hs. a 24:00 hs.
+    </p>
+
+    <p class="estilo_horario2">
+        Viernes y Sábados de 12:30 hs. a 01:00 hs.
+    </p>
+
+    <div id="contenedor_inicio">
+        <div class="slider">
+            <ul>
+                <li><img src="{% static 'core/img/promo1.jpg' %}" alt=""></li>
+                <li><img src="{% static 'core/img/h2.jpg' %}" alt=""></li>
+                <li><img src="{% static 'core/img/promo2.jpg' %}" alt=""></li>
+                <li><img src="{% static 'core/img/helado.jpg' %}" alt=""></li>
+            </ul>
+        </div>
+    </div>
+
+    <p class="contenedor_direccion">Encontranos en Avenida Edén 895, La Falda, Córdoba, Argentina.</p>
+</body>
+
+{% endblock %}

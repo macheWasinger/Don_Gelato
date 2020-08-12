@@ -1,0 +1,42 @@
+{% extends 'core/base.html' %}
+
+{% load static %}
+
+{% block css %}
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.3.5/jquery.fancybox.min.css" />
+
+    {% block javascript %}
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.3.5/jquery.fancybox.min.js"></script>
+    {% endblock %}
+{% endblock %}
+
+{% block contenido %}
+
+
+<body>
+    <div id="container_historia">
+        <h2 class="estilo_titulo_historia">Historia</h2>
+        <p class="estilo_texto_historia">
+            A principios del siglo veinte, la familia Lescano, oriunda de Sicilia (la isla más grande del Mediterráneo que
+            se ubica justo frente a la "punta" de la "bota" italiana), fundó la heladería Don Gelato,
+            en la que tres generaciones de artesanos trabajaron entre 1906 y 1955 acunando las recetas familiares.
+            En el año 1955, estos artesanos embarcaron hacia América y llegaron a la Argentina. En 1957 se
+            establecieron en la Av. Edén, en el mismo local que hasta hoy guarda honradamente aquellas deliciosas
+            recetas familiares, y allí comenzaron a elaborar el Helado Artesanal que los convertiría en pocos años en
+            una Heladería Tradicional de la maravillosa ciudad de La Falda, Córdoba.
+            Conocé "Don Gelato", donde la alquimia de lo artesanal, las recetas familiares atesoradas por generaciones y
+            las mejores materias primas se conjugan en un Helado Artesanal delicioso, fresco y natural.
+        </p>
+        <div class="slider_historia">
+            <ul>
+                <li><img src="{% static 'core/img/img1.jpg' %}" alt=""></li>
+                <li><img src="{% static 'core/img/img2.jpg' %}" alt=""></li>
+                <li><img src="{% static 'core/img/img3.jpg' %}" alt=""></li>
+                <li><img src="{% static 'core/img/img4.jpg' %}" alt=""></li>
+            </ul>
+        </div>
+    </div>
+
+</body>
+{% endblock %}

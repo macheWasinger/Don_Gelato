@@ -1,0 +1,61 @@
+{% extends 'core/base.html' %}
+
+{% load static %}
+
+{% block css %}
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.3.5/jquery.fancybox.min.css" />
+
+    {% block javascript %}
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.3.5/jquery.fancybox.min.js"></script>
+    {% endblock %}
+
+{% endblock %}
+
+{% block contenido %}
+
+<body>
+    </div>
+
+    <h2 class="titulo_contenedor_contacto">CONTACTANOS</h2>
+
+    <div id="estilo_contenedorContacto" style="background-image: url('/static/core/img/fondo11.jpg'); background-size: cover; padding-top: 170px;">
+        <div class="ubicacion_redes">
+            <a href="https://www.facebook.com/marcelo.wasinger" target="_blank">
+                <img src="{% static 'core/img/facebook.png' %}" alt="" class="estilo_logo_facebook">
+            </a>
+            <a href="https://www.instagram.com/machewasinger90" target="_blank">
+                <img src="{% static 'core/img/instagram.png' %}" alt="" class="estilo_logo_instagram">
+            </a>
+            <a href="https://www.twitter.com/maw_2018" target="_blank">
+                <img src="{% static 'core/img/twitter.png' %}" alt="" class="estilo_logo_twitter">
+            </a>
+            <div id="estilo_whatsapp">
+                <img src="{% static 'core/img/whatsapp.png' %}" alt="" class="estilo_logo_whatsapp">
+                1188911516
+            </div>
+        </div>
+
+        <form action="" method="POST" enctype="multipart/form-data">
+            {% csrf_token %}
+            <div class="form-row mi_form-row">
+                <div class="col mi_col_nombre">
+                    <input type="text" name="nombre" class="form-control" placeholder="Nombre">
+                </div>
+                <div class="col mi_col_email">
+                    <input type="email" name="mail" class="form-control" placeholder="E-mail">
+                </div>
+                <div class="form-group mi_form-group">
+                    <input type="text" name="mensaje" size="200" placeholder="Mensaje:" class="contenedor_areaMensaje">
+                </div>
+                <p>
+                    <input type="submit" value="Enviar" class="estilo_botonEnviar btn btn-outline-dark">
+                </p>
+            </div>
+            <p class="estilo_AlertaMensajeEnviado">
+                <strong>{{ mensaje }}</strong>
+            </p>
+        </form>
+    </div>
+</body>
+{% endblock %}

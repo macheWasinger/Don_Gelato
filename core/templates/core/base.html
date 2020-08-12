@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    {% load static %}
+    {% block css %}
+    {% endblock %}
+
+    <link rel="icon" type="image/png" href="{% static 'core/img/icono_logoPestaña.ico' %}">
+    <link rel="stylesheet" href="{% static 'core/css/estilos.css' %}">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel = "stylesheet" href = "https://fonts.googleapis.com/css?family=Tangerine" >
+    <link href="https://fonts.googleapis.com/css2?family=Red+Rose:wght@700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Itim&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Smythe&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Varela+Round)" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Original+Surfer&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:800" rel="alternate">
+    <link href="https://fonts.googleapis.com/css?family=News+Cycle:400" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lalezar&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Amatic+SC&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Courgette&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li>
+                    <a href="{% url 'inicio' %}"><strong>INICIO</strong></a>
+                </li>
+                <li>
+                    <a href="{% url 'sabores' %}"><strong>SABORES</strong></a>
+                </li>
+                <li>
+                    <a href="{% url 'postres' %}"><strong>POSTRES</strong></a>
+                </li>
+                <li>
+                    <a href="{% url 'historia' %}"><strong>HISTORIA</strong></a>
+                </li>
+                <li>
+                    <a href="{% url 'contacto' %}"><strong>CONTACTANOS</strong></a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <div id="principal">
+        <br>
+        <br>
+
+        <div class="container">
+            {% block contenido %}
+            {% endblock %}
+        </div>
+        <br>
+    </div>
+
+    <!--realizamos la carga del script al final
+    para asegurarnos que la página esta cargada-->
+    <script src="js/basico.js"></script>
+</body>
+</html>

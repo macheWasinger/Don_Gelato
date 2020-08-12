@@ -1,0 +1,1018 @@
+* {
+    margin:0;
+    padding: 0px;
+}
+
+body {
+    background: rgba(5,5,5,1);
+    background: -moz-linear-gradient(top, rgba(5,5,5,1) 0%, rgba(56,55,56,1) 5%, rgba(99,98,99,1) 10%, rgba(133,133,133,1) 16%, rgba(176,174,176,1) 22%, rgba(209,207,209,1) 29%, rgba(227,224,227,1) 37%, rgba(255,255,255,1) 46%, rgba(255,255,255,1) 51%, rgba(255,255,255,1) 59%, rgba(255,255,255,1) 71%, rgba(255,255,255,1) 87%, rgba(255,255,255,1) 100%);
+    background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(5,5,5,1)), color-stop(5%, rgba(56,55,56,1)), color-stop(10%, rgba(99,98,99,1)), color-stop(16%, rgba(133,133,133,1)), color-stop(22%, rgba(176,174,176,1)), color-stop(29%, rgba(209,207,209,1)), color-stop(37%, rgba(227,224,227,1)), color-stop(46%, rgba(255,255,255,1)), color-stop(51%, rgba(255,255,255,1)), color-stop(59%, rgba(255,255,255,1)), color-stop(71%, rgba(255,255,255,1)), color-stop(87%, rgba(255,255,255,1)), color-stop(100%, rgba(255,255,255,1)));
+    background: -webkit-linear-gradient(top, rgba(5,5,5,1) 0%, rgba(56,55,56,1) 5%, rgba(99,98,99,1) 10%, rgba(133,133,133,1) 16%, rgba(176,174,176,1) 22%, rgba(209,207,209,1) 29%, rgba(227,224,227,1) 37%, rgba(255,255,255,1) 46%, rgba(255,255,255,1) 51%, rgba(255,255,255,1) 59%, rgba(255,255,255,1) 71%, rgba(255,255,255,1) 87%, rgba(255,255,255,1) 100%);
+    background: -o-linear-gradient(top, rgba(5,5,5,1) 0%, rgba(56,55,56,1) 5%, rgba(99,98,99,1) 10%, rgba(133,133,133,1) 16%, rgba(176,174,176,1) 22%, rgba(209,207,209,1) 29%, rgba(227,224,227,1) 37%, rgba(255,255,255,1) 46%, rgba(255,255,255,1) 51%, rgba(255,255,255,1) 59%, rgba(255,255,255,1) 71%, rgba(255,255,255,1) 87%, rgba(255,255,255,1) 100%);
+    background: -ms-linear-gradient(top, rgba(5,5,5,1) 0%, rgba(56,55,56,1) 5%, rgba(99,98,99,1) 10%, rgba(133,133,133,1) 16%, rgba(176,174,176,1) 22%, rgba(209,207,209,1) 29%, rgba(227,224,227,1) 37%, rgba(255,255,255,1) 46%, rgba(255,255,255,1) 51%, rgba(255,255,255,1) 59%, rgba(255,255,255,1) 71%, rgba(255,255,255,1) 87%, rgba(255,255,255,1) 100%);
+    background: linear-gradient(to bottom, rgba(5,5,5,1) 0%, rgba(56,55,56,1) 5%, rgba(99,98,99,1) 10%, rgba(133,133,133,1) 16%, rgba(176,174,176,1) 22%, rgba(209,207,209,1) 29%, rgba(227,224,227,1) 37%, rgba(255,255,255,1) 46%, rgba(255,255,255,1) 51%, rgba(255,255,255,1) 59%, rgba(255,255,255,1) 71%, rgba(255,255,255,1) 87%, rgba(255,255,255,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#050505', endColorstr='#ffffff', GradientType=0 );
+
+    font-family: fantasy;
+
+}
+
+.text {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  list-style: none;
+  border-bottom: 0;
+}
+
+.text.hidden {
+  border-bottom: 1px solid #fff;
+}
+
+.text li {
+  display: inline-block;
+  float: left;
+  font-weight: 700;
+  font-size: 2em;
+  color: #fff;
+  opacity: 1;
+  transition: all 0.5s ease-in-out;
+  max-width: 2em;
+}
+.text.hidden li.spaced {
+  padding-left: 0;
+}
+.text li.spaced {
+  padding-left: 0.5em;
+}
+
+.text.hidden li.ghost {
+  opacity: 0;
+  max-width: 0;
+}
+
+header{
+    letter-spacing: 1px;
+    display: inline-block;
+    font-family: 'Red Rose', cursive;
+    height: 46px;
+    margin-left: 0%;
+    width: 66%;
+}
+
+header a:hover{
+    color: rgb(182, 141, 76);
+}
+
+.titulo_textoDeslizable{
+    margin-left: 1%;
+    margin-top: -49.5%;
+    font-family: 'Red Rose', cursive;
+    font-size: 3vw;
+    color: rgb(182, 141, 76);
+
+
+    /* El código que contiene "text-shadow" sirve para agregarle sombra al texto y convertirlo en 3D. */
+    text-shadow: 0 1px 0 #ddd, 0 2px 0 #ccc, 0 3px 0 #bbb, 0 4px 0 #aaa, 0 5px 0 #acacac, 0 6px 1px rgba(0,0,0,0.1),
+                 0 0 5px rgba(0,0,0,0.1), 0 1px 3px rgba(0,0,0,0.3), 0 3px 5px rgba(0,0,0,0.2),
+                  0 5px 10px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.2), 0 20px 20px rgba(0,0,0,0.15);
+}
+
+.contenedor_texto_deslizable {
+    display: flex; /* Sirve para que las palabras que estén en las etiquetas "<ul> y <li>" se alineen una al lado de la otra. */
+    width: 24%;
+    height: 4.2%;
+    color: black;
+    font-size: 2vw; /* La letra es del mismo tamaño que el alto del contenedor para que entre justo y no sobre espacio. */
+    font-family: 'Original Surfer', cursive;
+    line-height: 38px;  /* Alto de linea.. Es la separacion que hay de una linea a otra. */
+    position: absolute;
+    margin-left: 4%;
+    margin-top: -13px;
+    overflow: hidden; /* Esta propiedad hace que los elementos que salen del contenedor, no se muestren. En este caso, que se oculten. */
+
+
+    text-shadow: 0 1px 0 #ddd, 0 1px 0 #ccc, 0 2px 0 #bbb, 0 3px 0 #aaa, 0 2px 0 #acacac, 0 5px 1px rgba(0,0,0,0.1),
+                 0 0 4px rgba(0,0,0,0.1), 0 1px 2px rgba(0,0,0,0.3), 0 2px 4px rgba(0,0,0,0.2),
+                  0 4px 4px rgba(0,0,0,0.25), 0 4px 4px rgba(0,0,0,0.2), 0 5px 5px rgba(0,0,0,0.15);
+}
+
+.estilo_ul_li_deslizable {
+    list-style: none; /* Sirve para borrar los iconos (items) de cada palabra del contenedor. */
+    padding-left: 10px;
+    animation: cambiar 10s infinite; /* Esta propiedad dice que los elementos se cambien infinitamente durante 6 segundos. */
+}
+
+.estilo_ENCONTRA{
+    color: white;
+    font-size: 1.7vw;
+    text-shadow: 0 1px 0 #ddd, 0 1px 0 #ccc, 0 2px 0 #bbb, 0 2px 0 #aaa, 0 2px 0 #acacac, 0 3px 1px rgba(0,0,0,0.1),
+                 0 0 2px rgba(0,0,0,0.1), 0 1px 2px rgba(0,0,0,0.3), 0 2px 2px rgba(0,0,0,0.2),
+                  0 2px 2px rgba(0,0,0,0.25), 0 4px 4px rgba(0,0,0,0.2), 0 3px 3px rgba(0,0,0,0.15);
+    margin-top: 0.2%;
+}
+
+.estilo_ul_li_deslizable, estilo_ENCONTRA{
+    margin: 0;
+}
+
+
+/* Los "keyframes" son las paradas de la animacion. En este caso, le damos las paradas a "cambiar" */
+@keyframes cambiar {
+
+    0% {margin-top: 0;}
+    20% {margin-top: 0;} /* el 20% de 6 segundos es 1,2 segundos. */
+
+    25% {margin-top: -40px;} /* "-40" es para que se deslice hacia arriba.  */
+    50% {margin-top: -40px;}
+
+    55% {margin-top: -80px;}
+    80% {margin-top: -80px;}
+
+    85% {margin-top: -40px;}
+    95% {margin-top: -40px;}
+
+    100% {margin-top: 0;}
+}
+
+.estilo_horario1{
+    margin-left: 80%;
+    margin-top: -3.9%;
+    font-size: 0.82vw;
+    font-family: 'Red Rose', cursive;
+    color: white;
+}
+
+.estilo_horario2{
+    margin-left: 80%;
+    margin-top: -1%;
+    font-size: 0.82vw;
+    font-family: 'Red Rose', cursive;
+    color: white;
+}
+
+#contenido_postres{
+    width: 64.2vw;
+    height: 59vw;
+    padding: 20px;
+    background: #CCC;
+    border-radius: 100px;
+    box-shadow: 2px 2px 2px 2px gray;
+    border-top: 2px solid gray;
+}
+
+#contenedor_postre1{
+    width: 16.7vw;
+    height: 9.2vw;
+    margin-left: 2%;
+    margin-top: 7px;
+}
+
+.estilo_imagen_postre1{
+    width: 16.7vw;
+    height: 9.2vw;
+    margin-left: 0%;
+    margin-top: 0px;
+    border-radius: 46px;
+    border: 2px solid black;
+    box-shadow: 3px 4px 3px black;
+}
+
+.estilo_titulo_postre1{
+    margin-left: 23%;
+    letter-spacing: 1px;
+    display: inline-block;
+    font-family: 'Red Rose', cursive;
+    margin-top: 1%;
+    font-size: 1.1vw;
+}
+
+#estilo_contenedorTexto_postre1{
+    width: 96%;
+    height: 116%;
+    margin-left: 2%;
+    margin-top: 0%;
+    background: red;
+}
+
+.estilo_descripcion_postre1{
+    margin-left: 0%;
+    letter-spacing: 1px;
+    display: inline-block;
+    font-family: 'Smythe', cursive;
+    margin-top: -2%;
+    font-size: 1.1vw; /* Sirve para moldear automaticamente un texto al tamaño de la ventana. */
+    text-align: center;
+}
+
+#contenedor_postre2{
+    width: 16.7vw;
+    height: 9.2vw;
+    margin-left: 36%;
+    margin-top: -15.3%;
+}
+
+.estilo_imagen_postre2{
+    width: 16.7vw;
+    height: 9.2vw;
+    margin-left: 0%;
+    margin-top: 0px;
+    border-radius: 46px;
+    border: 2px solid black;
+    box-shadow: 3px 4px 3px black;
+}
+
+.estilo_titulo_postre2{
+    margin-left: 23%;
+    letter-spacing: 1px;
+    display: inline-block;
+    font-family: 'Red Rose', cursive;
+    margin-top: 1%;
+    font-size: 1.1vw;
+}
+
+.estilo_descripcion_postre2{
+    margin-left: 0%;
+    letter-spacing: 1px;
+    display: inline-block;
+    font-family: 'Smythe', cursive;
+    margin-top: -2%;
+    font-size: 1.1vw;
+    text-align: center;
+}
+
+#contenedor_postre3{
+    width: 16.7vw;
+    height: 9.2vw;
+    margin-left: 71%;
+    margin-top: -15.3%;
+}
+
+.estilo_imagen_postre3{
+    width: 16.7vw;
+    height: 9.2vw;
+    margin-left: 0%;
+    margin-top: 0px;
+    border-radius: 46px;
+    border: 2px solid black;
+    box-shadow: 3px 4px 3px black;
+}
+
+.estilo_titulo_postre3{
+    margin-left: 13%;
+    letter-spacing: 1px;
+    display: inline-block;
+    font-family: 'Red Rose', cursive;
+    margin-top: 1%;
+    font-size: 1.1vw;
+}
+
+.estilo_descripcion_postre3{
+    margin-left: 0%;
+    letter-spacing: 1px;
+    display: inline-block;
+    font-family: 'Smythe', cursive;
+    margin-top: -2%;
+    font-size: 1.1vw;
+    text-align: center;
+}
+
+#contenedor_postre4{
+    width: 16.7vw;
+    height: 9.2vw;
+    margin-left: 2%;
+    margin-top: 27%;
+}
+
+.estilo_imagen_postre4{
+    width: 16.7vw;
+    height: 9.2vw;
+    margin-left: 0%;
+    margin-top: 0px;
+    border-radius: 46px;
+    border: 2px solid black;
+    box-shadow: 3px 4px 3px black;
+}
+
+.estilo_titulo_postre4{
+    margin-left: 24.5%;
+    letter-spacing: 1px;
+    display: inline-block;
+    font-family: 'Red Rose', cursive;
+    margin-top: 1%;
+    font-size: 1.1vw;
+}
+
+.estilo_descripcion_postre4{
+    margin-left: 0%;
+    letter-spacing: 1px;
+    display: inline-block;
+    font-family: 'Smythe', cursive;
+    margin-top: -2%;
+    font-size: 1.1vw;
+    text-align: center;
+}
+
+#contenedor_postre5{
+    width: 16.7vw;
+    height: 9.2vw;
+    margin-left: 36%;
+    margin-top: -15%;
+}
+
+.estilo_imagen_postre5{
+    width: 16.7vw;
+    height: 9.2vw;
+    margin-left: 0%;
+    margin-top: 0px;
+    border-radius: 46px;
+    border: 2px solid black;
+    box-shadow: 3px 4px 3px black;
+}
+
+.estilo_titulo_postre5{
+    margin-left: 27%;
+    letter-spacing: 1px;
+    display: inline-block;
+    font-family: 'Red Rose', cursive;
+    margin-top: 1%;
+    font-size: 1.1vw;
+}
+
+.estilo_descripcion_postre5{
+    margin-left: 0%;
+    letter-spacing: 1px;
+    display: inline-block;
+    font-family: 'Smythe', cursive;
+    margin-top: -2%;
+    font-size: 1.1vw;
+    text-align: center;
+}
+
+#contenedor_postre6{
+    width: 16.7vw;
+    height: 9.2vw;
+    margin-left: 71%;
+    margin-top: -15%;
+}
+
+.estilo_imagen_postre6{
+    width: 16.7vw;
+    height: 9.2vw;
+    margin-left: 0%;
+    margin-top: 0px;
+    border-radius: 46px;
+    border: 2px solid black;
+    box-shadow: 3px 4px 3px black;
+}
+
+.estilo_titulo_postre6{
+    margin-left: 25%;
+    letter-spacing: 1px;
+    display: inline-block;
+    font-family: 'Red Rose', cursive;
+    margin-top: 1%;
+    font-size: 1.1vw;
+}
+
+.estilo_descripcion_postre6{
+    margin-left: 0%;
+    letter-spacing: 1px;
+    display: inline-block;
+    font-family: 'Smythe', cursive;
+    margin-top: -2%;
+    font-size: 1.1vw;
+    text-align: center;
+}
+
+.imagen_slider {
+    width: 100%;
+    height: 500px;
+    object-fit: cover;
+}
+
+label.error {
+    color:red;
+    font-family: sans-serif;
+}
+
+input.error, textarea.error {
+    border:2px solid red !important;
+}
+
+.en_linea {
+    display: inline;
+}
+
+/*Una clase de CSS es un conjunto de estilos reutilizables*/
+
+.texto_blanco {
+    color:blue;
+}
+
+#principal {
+    width: 100%;
+    min-height: 100vh;
+    height: auto;
+}
+
+#contenedor_inicio {
+    margin: auto;
+    margin-top: auto;
+    margin-top: auto;
+    width: 100%;
+    height: 658px;
+    margin-top: 34px;
+}
+
+.contenedor_direccion {
+    clear: both;
+    width: 100%;
+    height: 30px;
+    margin-top: 159px;
+    color: black;
+    font-size: 0.9vw;
+    font-family: 'Lalezar', cursive;
+    margin-left: 37%;
+}
+
+nav {
+    width: 100%;
+    margin-top: 20px;
+    height: 10px;
+    margin-left: 0%;
+}
+
+nav > ul > li {
+    display: initial;
+    margin-left: 1%;
+
+    transition: all 0.5s;
+}
+
+nav > ul > li:hover {
+    color: rgb(182, 141, 76);
+}
+
+nav > ul > li > a {
+    color: white;
+    text-decoration: none;
+}
+
+.logo {
+    width: 70px;
+}
+
+.estilo_imagenFondo {
+    width: 1500px;
+}
+
+.estilo_contenedor_inicio {
+    height: auto;
+    margin:auto;
+    border-radius: 5px;
+}
+
+#contenedor_logo{
+    float: left;
+    margin-top: 25px;
+    width: 100%;
+    height: 145px;
+}
+
+.estilo_logo_DonGelato{
+    margin: 39.5%;
+    margin-top: -19px;
+    width: 343px;
+    height: 165px;
+    margin-left: 41.5%;
+}
+
+
+
+.titulo_contenedor_inicio {
+    color:#444343;
+    text-align: center;
+}
+
+.titulo_contenedor_postres {
+    letter-spacing: 2px;
+    display: inline-block;
+    font-family: 'Red Rose', cursive;
+    margin-top: -1%;
+    color: rgb(182, 141, 76);
+    margin-left: 41%;
+    font-size: 2vw;
+
+    text-shadow: 0 1px 0 #ddd, 0 2px 0 #ccc, 0 3px 0 #bbb, 0 4px 0 #aaa, 0 5px 0 #acacac, 0 6px 1px rgba(0,0,0,0.1),
+                 0 0 5px rgba(0,0,0,0.1), 0 1px 3px rgba(0,0,0,0.3), 0 3px 5px rgba(0,0,0,0.2),
+                  0 5px 10px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.2), 0 20px 20px rgba(0,0,0,0.15);
+
+}
+
+.titulo_contenedor_contacto{
+    margin-left: 42%;
+    margin-top: auto;
+    margin-bottom: 59px;
+    padding-top: 20px;
+    letter-spacing: 2px;
+    display: inline-block;
+    font-family: 'Red Rose', cursive;
+    color: rgb(182, 141, 76);
+
+    text-shadow: 0 1px 0 #ddd, 0 2px 0 #ccc, 0 3px 0 #bbb, 0 4px 0 #aaa, 0 5px 0 #acacac, 0 6px 1px rgba(0,0,0,0.1),
+                 0 0 5px rgba(0,0,0,0.1), 0 1px 3px rgba(0,0,0,0.3), 0 3px 5px rgba(0,0,0,0.2),
+                  0 5px 10px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.2), 0 20px 20px rgba(0,0,0,0.15);
+
+}
+
+#estilo_contenedorSabores{
+    width: 100%;
+    height: 725px;
+    margin-top: 147px;
+}
+
+.estilo_imagenSabores{
+    width: 101%;
+    height: 725px;
+    margin-left: -2px;
+    margin-top: -200px;
+    border-bottom: 2px solid black;
+    border-top: 2px solid white;
+}
+
+.estilo_textoSabores{
+    text-align: center;
+    font-family: 'Bebas Neue', cursive;
+    font-size: 25px;
+}
+
+#fondoTransparente_sabores {
+    background-color: rgba(255,255,255,0.6);
+    opacity: 0.6;
+    width: 30%;
+    height: 723px;
+    margin: auto;
+    margin-top: -723px;
+    overflow: auto; /* DA EL EFECTO SCROLL DE DESPLAZAMIENTO CON RUEDITA DEL MOUSE */
+}
+
+.titulo_contenedor_sabores{
+    margin-left: 45%;
+    margin-top: 40px;
+    margin-bottom: 63px;
+    padding-top: 20px;
+    letter-spacing: 2px;
+    display: inline-block;
+    font-family: 'Red Rose', cursive;
+    color: rgb(182, 141, 76);
+
+    text-shadow: 0 1px 0 #ddd, 0 2px 0 #ccc, 0 3px 0 #bbb, 0 4px 0 #aaa, 0 5px 0 #acacac, 0 6px 1px rgba(0,0,0,0.1),
+                 0 0 5px rgba(0,0,0,0.1), 0 1px 3px rgba(0,0,0,0.3), 0 3px 5px rgba(0,0,0,0.2),
+                  0 5px 10px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.2), 0 20px 20px rgba(0,0,0,0.15);
+
+}
+
+#estilo_contenedorContacto{
+    width: 100%;
+    height: 725px;
+    margin-top: -22px;
+    margin-left: -7px;
+    border-top: 5px solid white;
+}
+
+
+.estilo_imagenContacto{
+    width: 102%;
+    height: 705px;
+    margin-left: -8px;
+    margin-top: -174px;
+    border-bottom: 20px solid black;
+    border-top: 20px solid black;
+}
+
+.estilo_formularioContacto{
+    padding-left: 50px;
+    padding-top: 35px;
+    width: 702px;
+    height: 399px;
+    margin: auto;
+    background: rgb(182, 141, 76);
+    opacity: 0.3;
+    margin-top: inherit;
+}
+
+.contenedor_areaNombre {
+     border: 2px solid #dadada;
+     border-radius: 7px;
+     width: 600px;
+     font-size: 19px;
+}
+
+.contenedor_areaNombre:focus {
+     outline: none;
+     border-color: #9ecaed;
+     box-shadow: 0 0 10px #9ecaed;
+}
+
+.contenedor_areaMail {
+     border: 2px solid #dadada;
+     border-radius: 7px;
+     width: 600px;
+     font-size: 19px;
+}
+
+.contenedor_areaMail:focus {
+     outline: none;
+     border-color: #9ecaed;
+     box-shadow: 0 0 10px #9ecaed;
+}
+
+
+.contenedor_areaTelefono {
+     border: 2px solid #dadada;
+     border-radius: 5px;
+     width: 600px;
+     height: 35px;
+     font-size: 19px;
+}
+
+.contenedor_areaTelefono:focus {
+     outline: none;
+     border-color: #9ecaed;
+     box-shadow: 0 0 10px #9ecaed;
+}
+
+.contenedor_areaMensaje {
+     width: 100.5%;
+     height: 180px;
+     font-size: 19px;
+     margin-left: -2px;
+}
+
+.contenedor_areaMensaje:focus {
+     outline: none;
+     border-color: #9ecaed;
+     box-shadow: 0 0 10px #9ecaed;
+}
+
+
+.estilo_botonEnviar{
+    color: white;
+    width: 68px;
+    height: 37px;
+    font-size: 18px;
+    border-radius: 5px 5px 5px 5px;
+    margin-left: 35.8%;
+    margin-top: -15px;
+    background-color: rgb(182, 141, 76) !important;
+}
+
+.estilo_AlertaMensajeEnviado{
+    color: black;
+    margin-left: 40.5%;
+    margin-top: -2.3%;
+}
+
+.estilo_titulo_bandeja{
+    margin-left: 352px;
+    margin-top: 68px;
+    margin-bottom: 15px;
+    padding-bottom: 20px;
+    letter-spacing: -1px;
+    display: inline-block;
+    font-family: 'Red Rose', cursive;
+    color: rgb(182, 141, 86);
+}
+
+.estilo_bandeja{
+    margin-top: -9px;
+    background-color: black;
+}
+
+.estilo_logo_facebook{
+    width: 4.5%;
+    height: 5%;
+    float: left;
+    margin-top: 0%;
+    margin-left: -110px;
+}
+
+.estilo_logo_instagram{
+    width: 4.5%;
+    height: 5%;
+    margin-left: -6.2%;
+    margin-top: 0%;
+}
+
+.estilo_logo_twitter{
+    width: 4.5%;
+    height: 5%;
+    margin-left: 2px;
+    margin-top: 0%;
+}
+
+#estilo_whatsapp{
+    margin-left: 1000px;
+    font-family: 'Bebas Neue', cursive;
+    font-size: 22px;
+    color: rgb(182, 141, 76);
+    margin-left: 29%;
+    margin-top: -36px;
+}
+
+.estilo_logo_whatsapp {
+    width: 6%;
+    margin-left: -6%;
+    margin-top: -1.5%;
+}
+
+#contenedor_redes_contacto{
+    width: 100%;
+    margin-top: -205px;
+    height: 66px;
+    background: white;
+    float: left;
+}
+
+.ubicacion_redes{
+    margin-left: 41%;
+    margin-top: -4%;
+}
+
+th{
+    padding: .75rem;
+    vertical-align: top;
+    border-top: 1px solid #dee2e6;
+    color: white;
+}
+
+td{
+    color: white;
+}
+
+footer > div {
+    width: 25%;
+    float:left;
+}
+
+footer li {
+    list-style: none;
+}
+
+.logo_footer {
+    width: 100px;
+    margin:auto;
+    display: block;
+}
+
+.hide_on_mobile {
+    display: block;
+}
+
+.hide_on_desktop {
+    display: none;
+}
+
+.contenedor_contacto {
+    width: 90%;
+    min-height: 400px;
+    height: auto;
+    background-color:#ccc;
+    margin: auto;
+    margin-top: auto;
+    margin-top: -708px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.contenedor_contacto > div {
+    width: 50%;
+}
+
+label {
+    display: block;
+}
+
+input[type=text], input[type=email], textarea {
+    border: 2px solid black;
+    padding:5px 0;
+    border-radius: 6px;
+}
+
+.btn {
+    padding: 5px;
+    border:2px solid silver;
+    border-radius: 15px;
+}
+
+.mapa {
+    width: 90%;
+    height: 300px;
+}
+
+/*MEDIA QUERY PARA TELEFONOS*/
+@media (max-width:767px) {
+
+    .contenedor_contacto {
+        flex-direction: column;
+    }
+
+    .contenedor_contacto > div {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .hide_on_desktop {
+        display: block;
+    }
+
+
+    nav {
+        float: left;
+    }
+
+    header {
+        height: auto;
+    }
+
+    nav > ul > li {
+        display: block;
+        text-align: center;
+    }
+
+    .logo {
+        margin:auto;
+        display: block;
+    }
+
+}
+
+.slider{
+    margin: auto; /* Ubica las imagenes en el centro. */
+    margin-top: auto;
+    margin-left: auto;
+    margin-left: 0px;
+    margin-top: -7px;
+    overflow: hidden; /* Sirve para ocultar a las imagenes que estan fuera del centro de la pantalla. */
+                     /* Así la primera imagen quedaria en el centro y daria el efecto de que cada imagen pasa por el centro al cambiarse. */
+    width: 100%;
+    height: 646px;
+    border-top: 2px solid black;
+    box-shadow: 4px 5px 4px black;
+    border-bottom: 2px solid black;
+}
+
+.slider ul{
+    display: flex; /* Ubica a cada imagen al lado de la otra en forma horizontal. */
+    padding: 0; /* Sirve para eliminar el relleno "PADDING" que viene por defecto. */
+    width: 400%; /* De ancho pongo 400% porque son 4 imagenes. El ancho es dependiendo la cantidad de imagenes. */
+    animation: cambio 15s infinite alternate; /* Sirve para que las imagenes se cambien cada 3 segundos infinitas veces. */
+}
+
+.slider ul:hover{
+    animation-play-state: paused;
+    cursor: pointer;
+}
+
+.slider li{
+    width: 100%; /* Sirve para ajustar el ancho de cada imagen y que queden una al lado de la otra. */
+    list-style: none; /* Elimina los iconos de cada item de la lista. En este caso, de la lista de imagenes. */
+
+}
+
+.slider img {
+    width: 100%; /* Sirve para ajustar el ancho de cada imagen y que queden una al lado de la otra. */
+    height: 692px; /* Altura de cada imagen. */
+    margin-top: -50px;
+}
+
+@keyframes cambio{
+    0%{margin-left: 0%;}
+    21%{margin-left: 0%;}
+
+    26%{margin-left: -100%;}
+    47%{margin-left: -100%;}
+
+    52%{margin-left: -200%;}
+    73%{margin-left: -200%;}
+
+    78%{margin-left: -300%;}
+    100%{margin-left: -300%;}
+}
+
+#container_historia {
+    width: 39vw;
+    height: 41.5vw;
+    margin-left: 20%;
+    margin-top: 4%;
+    background: #CCC;
+    padding: 20px;
+    box-shadow: 2px 2px 2px 2px gray;
+    border-top: 2px solid black;
+}
+
+
+.estilo_titulo_historia {
+    letter-spacing: 2px;
+    display: inline-block;
+
+    margin-top: -1%;
+    color: black;
+    margin-left: 38%;
+    font-size: 2.1vw;
+
+    text-shadow: 0 1px 0 #ddd, 0 2px 0 #ccc, 0 3px 0 #bbb, 0 4px 0 #aaa, 0 5px 0 #acacac, 0 6px 1px rgba(0,0,0,0.1),
+                 0 0 5px rgba(0,0,0,0.1), 0 1px 3px rgba(0,0,0,0.3), 0 3px 5px rgba(0,0,0,0.2),
+                  0 5px 10px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.2), 0 20px 20px rgba(0,0,0,0.15);
+    font-family: 'Courgette', cursive;
+}
+
+.estilo_texto_historia {
+    margin-left: 0%;
+    letter-spacing: 1px;
+    display: inline-block;
+    font-family: 'Courgette', cursive;
+    margin-top: 0%;
+    font-size: 0.9vw;
+    text-align: center;
+}
+
+.slider_historia{
+    margin: auto; /* Ubica las imagenes en el centro. */
+    margin-left: 3.7%;
+    margin-top: -1%;
+    overflow: hidden; /* Sirve para ocultar a las imagenes que estan fuera del centro de la pantalla. */
+                     /* Así la primera imagen quedaria en el centro y daria el efecto de que cada imagen pasa por el centro al cambiarse. */
+    width: 34vw;
+    height: 20vw;
+    border-top: 2px solid black;
+    box-shadow: 4px 5px 4px black;
+    border-bottom: 2px solid black;
+}
+
+.slider_historia ul{
+    display: flex; /* Ubica a cada imagen al lado de la otra en forma horizontal. */
+    padding: 0; /* Sirve para eliminar el relleno "PADDING" que viene por defecto. */
+    width: 400%; /* De ancho pongo 400% porque son 4 imagenes. El ancho es dependiendo la cantidad de imagenes. */
+    animation: cambio_img_historia 15s infinite alternate; /* Sirve para que las imagenes se cambien cada 3 segundos infinitas veces. */
+}
+
+.slider_historia ul:hover{
+    animation-play-state: paused;
+    cursor: pointer;
+}
+
+.slider_historia li{
+    width: 100%; /* Sirve para ajustar el ancho de cada imagen y que queden una al lado de la otra. */
+    list-style: none; /* Elimina los iconos de cada item de la lista. En este caso, de la lista de imagenes. */
+
+}
+
+.slider_historia img {
+    width: 34vw; /* Sirve para ajustar el ancho de cada imagen y que queden una al lado de la otra. */
+    height: 20vw; /* Altura de cada imagen. */
+    margin-top: -2px;
+}
+
+@keyframes cambio_img_historia{
+    0%{margin-left: 0%;}
+    21%{margin-left: 0%;}
+
+    26%{margin-left: -100%;}
+    47%{margin-left: -100%;}
+
+    52%{margin-left: -200%;}
+    73%{margin-left: -200%;}
+
+    78%{margin-left: -300%;}
+    100%{margin-left: -300%;}
+}
+
+
+.col {
+    margin-left: 35.5%;
+}
+
+.mi_form-row {
+    margin-top: 2%;
+    display: inherit !important;
+}
+
+.mi_col_nombre {
+    max-width: 28% !important; /* "!important" sirve para pisar y modificar lo que ya viene por defecto. En este caso,
+                                   lo que ya vino hecho en Bootstrap. */
+}
+
+.mi_col_email {
+    max-width: 28% !important;
+}
+
+.mi_form-group {
+    max-width: 27.3%;
+    margin-left: 35.9%;
+}
